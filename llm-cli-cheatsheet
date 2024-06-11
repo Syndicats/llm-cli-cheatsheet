@@ -1,0 +1,21 @@
+# creates a git commit message from git diff
+#
+# example: gen_commit_msg
+function gen_commit_msg() {
+    git diff | llm  -s "Write a short git commit message for the following diff. Return only the commit message."
+}
+
+# creates test data for the file that is passed to that function
+#
+# example: gen_test_data user.ts
+function gen_test_data() {
+  local file_path="$1"
+  
+  # Check if a valid file path was provided
+  if [[ -f "$file_path" ]]; then
+    # Display the file content using 'cat' and pipe it into the LLM processing function
+    cat "$file_path" | llm -s "create valid test data for the following interface. no explenation. only the test data as output"
+  else
+    echo "Error: File does not exist."
+  fi
+}
