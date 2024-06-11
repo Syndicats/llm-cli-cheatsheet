@@ -14,7 +14,21 @@ function gen_test_data() {
   # Check if a valid file path was provided
   if [[ -f "$file_path" ]]; then
     # Display the file content using 'cat' and pipe it into the LLM processing function
-    cat "$file_path" | llm -s "create valid test data for the following interface. no explenation. only the test data as output"
+    cat "$file_path" | llm -s "create valid test data for the following interface. no explanation. only the test data as output"
+  else
+    echo "Error: File does not exist."
+  fi
+}
+
+# explains the code that is passed as a file
+#
+# example: gen_test_data user.ts
+function explain_code() {
+  local file_path="$1"
+  
+  # Check if a valid file path was provided
+  if [[ -f "$file_path" ]]; then
+    cat "$file_path" | llm -s "Explain this code"
   else
     echo "Error: File does not exist."
   fi
