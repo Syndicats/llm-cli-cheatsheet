@@ -22,9 +22,9 @@ The following functions are currently provided
 
 | Function               | Description                                                      | Example |
 |------------------------|------------------------------------------------------------------|---------|
-| `gen_commit_msg`       | Generates a Git commit message from the git diff output | `gen_commit_msg` |
-| `gen_test_data`  | Creates test data for a given file  | `gen_test_data user.ts` |
-| `explain_code`   | Provides explanations for the code within a specific file | `explain_code user.ts` |
+| `llm.git.msg`       | Generates a Git commit message from the git diff output | `llm.git.msg` |
+| `llm.code.testdata`  | Creates test data for a given file  | `llm.code.testdata user.ts` |
+| `llm.code.explain`   | Provides explanations for the code within a specific file | `llm.code.explain user.ts` |
 
 ## Contribution
 

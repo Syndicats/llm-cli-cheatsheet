@@ -1,14 +1,14 @@
 # creates a git commit message from git diff
 #
-# example: gen_commit_msg
-function gen_commit_msg() {
+# example: llm.git.msg
+function llm.git.msg() {
     git diff | llm  -s "Write a short git commit message for the following diff. Return only the commit message."
 }
 
 # creates test data for the file that is passed to that function
 #
-# example: gen_test_data user.ts
-function gen_test_data() {
+# example: llm.code.testdata user.ts
+function llm.code.testdata() {
   local file_path="$1"
   
   # Check if a valid file path was provided
@@ -22,8 +22,8 @@ function gen_test_data() {
 
 # explains the code that is passed as a file
 #
-# example: gen_test_data user.ts
-function explain_code() {
+# example: llm.code.explain user.ts
+function llm.code.explain() {
   local file_path="$1"
   
   # Check if a valid file path was provided
