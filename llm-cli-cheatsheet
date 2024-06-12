@@ -5,6 +5,13 @@ function llm.git.msg() {
     git diff | llm  -s "Write a short git commit message for the following diff. Return only the commit message."
 }
 
+# compare two revisions of the current git repository
+#
+# example: llm.git.compare main developement
+function llm.git.compare() {
+    git diff $1 $2 | llm  -s "Create a comparision of the difference between. Output the findings structured by commit hash and a brief summary of the changes and output the files that are involved."
+}
+
 # creates test data for the file that is passed to that function
 #
 # example: llm.code.testdata user.ts

@@ -23,6 +23,7 @@ The following functions are currently provided
 | Function               | Description                                                      | Example |
 |------------------------|------------------------------------------------------------------|---------|
 | `llm.git.msg`       | Generates a Git commit message from the git diff output | `llm.git.msg` |
+| `llm.git.compare`       | Compares two revisions of the current git repository | `llm.git.compare main dev` |
 | `llm.code.testdata`  | Creates test data for a given file  | `llm.code.testdata user.ts` |
 | `llm.code.explain`   | Provides explanations for the code within a specific file | `llm.code.explain user.ts` |
 
