@@ -9,7 +9,7 @@ Currently it always calls and uses the default model that is configured for `llm
 
 ## Usage
 
-1. install `llm` from Simon Willison, install introductions can be found [here](https://llm.datasette.io/en/latest/setup.html)
+1. install `llm` from Simon Willison, install instructions can be found [here](https://llm.datasette.io/en/latest/setup.html)
 2. configure the default model you would like to use with `llm models default <modelid>`
 3. clone this repository and source the `llm-cli-cheatsheet` with the following command `source llm-cli-cheatsheet`
 
