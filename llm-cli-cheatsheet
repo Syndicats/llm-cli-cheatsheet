@@ -2,7 +2,7 @@
 #
 # example: llm.git.msg
 function llm.git.msg() {
-    git diff --staged | llm  -s "Write a short git commit message for the following diff. Return only the commit message."
+    git diff --staged | llm  -s "Write a comprehensive git commit message for the following diff. Return only the commit message."
 }
 
 # compare two revisions of the current git repository
